@@ -10,6 +10,10 @@ class MyPurchasesNotesView extends StatefulWidget {
 class _MyPurchasesNotesViewState extends State<MyPurchasesNotesView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Alışveriş Notlarım'),
+      ),
+    );
   }
 }

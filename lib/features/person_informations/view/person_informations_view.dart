@@ -10,6 +10,10 @@ class PersonInformationsView extends StatefulWidget {
 class _PersonInformationsViewState extends State<PersonInformationsView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Kullanıcı Bilgileri'),
+      ),
+    );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_shop/core/constants/colors_constants.dart';
-import 'package:smart_shop/features/dashboard/view/dashboard_view.dart';
+import 'package:smart_shop/core/constants/routers/router_manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Smart Shop',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const DashboardView(),
+      routerConfig: appRoutes,
     );
   }
 }

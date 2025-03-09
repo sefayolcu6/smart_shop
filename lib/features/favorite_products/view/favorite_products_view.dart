@@ -10,6 +10,10 @@ class FavoriteProductsView extends StatefulWidget {
 class _FavoriteProductsViewState extends State<FavoriteProductsView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Favori Ürünler'),
+      ),
+    );
   }
 }

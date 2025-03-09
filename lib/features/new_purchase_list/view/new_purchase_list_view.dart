@@ -10,6 +10,10 @@ class NewPurchaseListView extends StatefulWidget {
 class _NewPurchaseListViewState extends State<NewPurchaseListView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Yeni Alışveriş Listesi'),
+      ),
+    );
   }
 }

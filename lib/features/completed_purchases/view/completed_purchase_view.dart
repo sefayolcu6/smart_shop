@@ -10,6 +10,10 @@ class CompletedPurchaseView extends StatefulWidget {
 class _CompletedPurchaseViewState extends State<CompletedPurchaseView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Tamamlanan Alışverişler'),
+      ),
+    );
   }
 }

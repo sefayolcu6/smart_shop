@@ -10,6 +10,10 @@ class WaitingPurchasesView extends StatefulWidget {
 class _WaitingPurchasesViewState extends State<WaitingPurchasesView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Bekleyen Alışverişler'),
+      ),
+    );
   }
 }

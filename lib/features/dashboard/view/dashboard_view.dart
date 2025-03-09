@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smart_shop/core/constants/colors_constants.dart';
 import 'package:smart_shop/core/constants/padding_constants.dart';
+import 'package:smart_shop/core/constants/routers/router_names.dart';
 import 'package:smart_shop/core/widgets/redirect_menu_card.dart';
 import 'package:smart_shop/core/widgets/small_card.dart';
 
@@ -80,22 +82,30 @@ class _DashboardViewState extends State<DashboardView> {
           SmallCard(
             title: "Harcamalarım",
             icon: Icons.wallet,
-            onTap: () {},
+            onTap: () {
+              context.push(RouterNames.myExpenses);
+            },
           ),
           SmallCard(
             title: "Tamamlanan Alışverişler",
             icon: Icons.check_box_outlined,
-            onTap: () {},
+            onTap: () {
+              context.push(RouterNames.comletedPurchases);
+            },
           ),
           SmallCard(
             title: "Alışveriş Notlarım",
             icon: Icons.note_add_outlined,
-            onTap: () {},
+            onTap: () {
+              context.push(RouterNames.myPurchasesNotes);
+            },
           ),
           SmallCard(
             title: "Bekleyen Alışverişler ",
             icon: Icons.timer_sharp,
-            onTap: () {},
+            onTap: () {
+              context.push(RouterNames.waitingPurchases);
+            },
           ),
         ],
       ),
@@ -107,42 +117,54 @@ class _DashboardViewState extends State<DashboardView> {
         child: ListView(children: [
       RedirectMenuCard(
         leadingIcon: Icons.shopping_cart_checkout_rounded,
-        onTap: () {},
+        onTap: () {
+          context.push(RouterNames.newPurchasesList);
+        },
         title: 'Yeni Alışveriş Listesi',
         subtitle: 'Yeni bir alışveriş listesi oluşturun',
         trailingIcon: Icons.arrow_forward_ios,
       ),
       RedirectMenuCard(
         leadingIcon: Icons.shopify_outlined,
-        onTap: () {},
+        onTap: () {
+          context.push(RouterNames.myTemplates);
+        },
         title: 'Alışveriş Şablonlarım',
         subtitle: 'Yeni bir alışveriş şablon listesi oluşturun',
         trailingIcon: Icons.arrow_forward_ios,
       ),
       RedirectMenuCard(
         leadingIcon: Icons.history,
-        onTap: () {},
+        onTap: () {
+          context.push(RouterNames.recentPurchases);
+        },
         title: 'Geçmiş Alışverişler',
         subtitle: 'Önceki alışveriş listelerinize göz atın ve tekrar kullanın',
         trailingIcon: Icons.arrow_forward_ios,
       ),
       RedirectMenuCard(
         leadingIcon: Icons.star_border,
-        onTap: () {},
+        onTap: () {
+          context.push(RouterNames.favoriteProducts);
+        },
         title: 'Favori Ürünlerim',
         subtitle: 'Sık sık satın aldığınız ürünleri listeleyin ve hızlıca ekleyin',
         trailingIcon: Icons.arrow_forward_ios,
       ),
       RedirectMenuCard(
         leadingIcon: Icons.settings,
-        onTap: () {},
+        onTap: () {
+          context.push(RouterNames.appSettings);
+        },
         title: 'Uygulama Ayarları',
         subtitle: 'Tercihlerinizi düzenleyin',
         trailingIcon: Icons.arrow_forward_ios,
       ),
       RedirectMenuCard(
         leadingIcon: Icons.person,
-        onTap: () {},
+        onTap: () {
+          context.push(RouterNames.personInformation);
+        },
         title: 'Kullanıcı Bilgileri',
         subtitle: 'Kullanıcı bilgilerinizi ekleyin veya düzenleyin',
         trailingIcon: Icons.arrow_forward_ios,

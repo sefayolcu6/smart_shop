@@ -10,6 +10,10 @@ class RecentPurchaseView extends StatefulWidget {
 class _RecentPurchaseViewState extends State<RecentPurchaseView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Geçmiş Alışverişlerim'),
+      ),
+    );
   }
 }

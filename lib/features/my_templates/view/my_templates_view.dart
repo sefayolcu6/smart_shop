@@ -10,6 +10,10 @@ class MyTemplatesView extends StatefulWidget {
 class _MyTemplatesViewState extends State<MyTemplatesView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Alışveriş Şablonlarım'),
+      ),
+    );
   }
 }

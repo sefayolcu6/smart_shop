@@ -10,6 +10,10 @@ class MyExpensesView extends StatefulWidget {
 class _MyExpensesViewState extends State<MyExpensesView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Harcamalarım'),
+      ),
+    );
   }
 }

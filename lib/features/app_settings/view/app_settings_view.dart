@@ -10,6 +10,13 @@ class AppSettingsView extends StatefulWidget {
 class _AppSettingsViewState extends State<AppSettingsView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Uygulama Ayarları'),
+      ),
+      body: const Center(
+        child: Text('Ayarlar Sayfası'),
+      ),
+    );
   }
 }
