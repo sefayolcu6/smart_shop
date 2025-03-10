@@ -6,7 +6,7 @@ import 'package:lottie/lottie.dart';
 import 'package:smart_shop/core/constants/colors_constants.dart';
 import 'package:smart_shop/core/constants/images_constants.dart';
 import 'package:smart_shop/core/constants/routers/router_names.dart';
-import 'package:smart_shop/core/extensions/utils.dart';
+import 'package:smart_shop/core/mixins/utils.dart';
 import 'package:smart_shop/core/widgets/button_widget.dart';
 import 'package:smart_shop/core/widgets/flushbar_widget.dart';
 import 'package:smart_shop/core/widgets/textformfield_widget.dart';

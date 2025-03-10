@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_shop/core/constants/colors_constants.dart';
 import 'package:smart_shop/core/constants/padding_constants.dart';
-import 'package:smart_shop/core/extensions/utils.dart';
+import 'package:smart_shop/core/mixins/utils.dart';
 
 class AppElevatedButton extends StatefulWidget {
   final Widget child;
