@@ -17,7 +17,8 @@ import 'package:smart_shop/features/person_informations/view/person_informations
 import 'package:smart_shop/features/recent_shops/view/recent_purchase_view.dart';
 import 'package:smart_shop/features/waiting_purchases/view/waiting_purchases_view.dart';
 
-final appRoutes = GoRouter(
+GoRouter appRoutes({required bool isSavedUser}){
+  return GoRouter(
   initialLocation: RouterNames.introduction,
   routes: [
     GoRoute(
@@ -101,3 +102,10 @@ final appRoutes = GoRouter(
         }),
   ],
 );
+}
+
+
+
+
+
+

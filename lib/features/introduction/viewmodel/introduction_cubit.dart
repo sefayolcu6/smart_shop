@@ -20,6 +20,7 @@ class IntroductionCubit extends Cubit<IntroductionState> {
       // nameController'dan alınan ismi kutuya ekliyoruz.
       if (nameController.text.isNotEmpty) {
         await personInfo.put("name", nameController.text);
+        await personInfo.put("isSaved", true);
         emit(IntroductionSuccess(personInfo.get("name")));
       } else {
         emit(IntroductionError(errorMessage: "Name cannot be empty"));
@@ -45,6 +46,8 @@ class IntroductionCubit extends Cubit<IntroductionState> {
 
   //clear box
   Future<void> clearBox() async {
+    personInfo = await Hive.openBox('PersonInfo');
     await personInfo.clear();
+    print("Deleted");
   }
 }
