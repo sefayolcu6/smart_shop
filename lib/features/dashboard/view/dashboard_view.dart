@@ -21,7 +21,7 @@ class _DashboardViewState extends State<DashboardView> {
         title: const Text('SmartShop'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.settings),
+            icon: const Icon(Icons.language_outlined),
             onPressed: () {},
           ),
         ],

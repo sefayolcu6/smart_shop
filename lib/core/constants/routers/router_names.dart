@@ -11,4 +11,5 @@ class RouterNames {
   static const String personInformation = '/personInformation';
   static const String recentPurchases = '/recentShops';
   static const String waitingPurchases = '/waitingPurchases';
+  static const String introduction = '/introduction';
 }

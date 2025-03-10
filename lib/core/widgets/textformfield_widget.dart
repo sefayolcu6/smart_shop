@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_shop/core/constants/colors_constants.dart';
 import 'package:smart_shop/core/constants/padding_constants.dart';
 
 class AppTextFormField extends StatefulWidget {
@@ -43,6 +44,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
         decoration: InputDecoration(
           prefixIcon: widget.prefixIcon,
           suffixIcon: IconButton(
+            color: ColorConstant.instance.white,
             onPressed: () {
               widget.controller.clear();
               widget.focusNode?.unfocus();
@@ -50,10 +52,24 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
             icon: const Icon(Icons.close),
           ),
           labelText: widget.label,
-          border: const OutlineInputBorder(
+          labelStyle: TextStyle(color: ColorConstant.instance.white), // Optional: Label color
+          border: OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(30.0),
             ),
+            borderSide: BorderSide(color: ColorConstant.instance.white), // White border
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(30.0),
+            ),
+            borderSide: BorderSide(color: ColorConstant.instance.white), // White border
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(30.0),
+            ),
+            borderSide: BorderSide(color: ColorConstant.instance.white), // White border on focus
           ),
         ),
       ),

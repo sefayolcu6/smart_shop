@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:smart_shop/core/constants/routers/router_names.dart';
 import 'package:smart_shop/features/app_settings/view/app_settings_view.dart';
 import 'package:smart_shop/features/completed_purchases/view/completed_purchase_view.dart';
 import 'package:smart_shop/features/dashboard/view/dashboard_view.dart';
 import 'package:smart_shop/features/favorite_products/view/favorite_products_view.dart';
+import 'package:smart_shop/features/introduction/view/introduction_view.dart';
+import 'package:smart_shop/features/introduction/viewmodel/introduction_cubit.dart';
 import 'package:smart_shop/features/my_expenses/view/my_expenses_view.dart';
 import 'package:smart_shop/features/my_purchases/view/my_purchases_view.dart';
 import 'package:smart_shop/features/my_purchases_notes/view/my_purchases_notes_view.dart';
@@ -15,7 +18,7 @@ import 'package:smart_shop/features/recent_shops/view/recent_purchase_view.dart'
 import 'package:smart_shop/features/waiting_purchases/view/waiting_purchases_view.dart';
 
 final appRoutes = GoRouter(
-  initialLocation: RouterNames.dashboard,
+  initialLocation: RouterNames.introduction,
   routes: [
     GoRoute(
       name: 'home',
@@ -28,6 +31,15 @@ final appRoutes = GoRouter(
         path: RouterNames.appSettings,
         pageBuilder: (context, state) {
           return const MaterialPage(child: AppSettingsView());
+        }),
+    GoRoute(
+        path: RouterNames.introduction,
+        pageBuilder: (context, state) {
+          return MaterialPage(
+              child: BlocProvider(
+            create: (context) => IntroductionCubit(),
+            child: OnboardingScreen(),
+          ));
         }),
     GoRoute(
         path: RouterNames.comletedPurchases,

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:smart_shop/core/constants/colors_constants.dart';
 import 'package:smart_shop/core/constants/routers/router_manager.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Hive.initFlutter();
   runApp(const MyApp());
 }
 
