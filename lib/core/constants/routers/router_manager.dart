@@ -24,7 +24,10 @@ final appRoutes = GoRouter(
       name: 'home',
       path: RouterNames.dashboard,
       pageBuilder: (context, state) {
-        return const MaterialPage(child: DashboardView());
+        return MaterialPage(
+            child: DashboardView(
+          userName: state.extra.toString(),
+        ));
       },
     ),
     GoRoute(

@@ -7,7 +7,8 @@ import 'package:smart_shop/core/widgets/redirect_menu_card.dart';
 import 'package:smart_shop/core/widgets/small_card.dart';
 
 class DashboardView extends StatefulWidget {
-  const DashboardView({super.key});
+  final String userName;
+  const DashboardView({super.key, required this.userName});
 
   @override
   State<DashboardView> createState() => _DashboardViewState();
@@ -62,7 +63,7 @@ class _DashboardViewState extends State<DashboardView> {
                 ),
           ),
           TextSpan(
-            text: 'Ahmet Yılmaz',
+            text: widget.userName,
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,

@@ -77,9 +77,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> with Utils {
             listener: (context, state) {
               if (state is IntroductionSuccess) {
                 successFlushbar(context: context, title: "Başarılı", description: "Hoş Geldiniz ${state.userName}");
+                context.go(RouterNames.dashboard,extra: state.userName);
               } else if (state is IntroductionError) {
                 errorFlushbar(context: context, title: "Başarısız", description: state.errorMessage);
-                context.go(RouterNames.dashboard);
               }
             },
             child: Column(
@@ -89,12 +89,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> with Utils {
                 AppElevatedButton(
                     child: Text("Kaydet"),
                     onPressed: () async {
-                      final navigator = context.go;
                       await introductionCubit.saveNameInHive();
-                      if (mounted) {
-                        navigator(RouterNames.dashboard);
-                      }
-                      // introductionCubit.clearBox();
                     }),
               ],
             ),
