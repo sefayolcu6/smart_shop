@@ -77,7 +77,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> with Utils {
             listener: (context, state) {
               if (state is IntroductionSuccess) {
                 successFlushbar(context: context, title: "Başarılı", description: "Hoş Geldiniz ${state.userName}");
-                context.go(RouterNames.dashboard,extra: state.userName);
+                context.go(RouterNames.dashboard, extra: state.userName);
               } else if (state is IntroductionError) {
                 errorFlushbar(context: context, title: "Başarısız", description: state.errorMessage);
               }
